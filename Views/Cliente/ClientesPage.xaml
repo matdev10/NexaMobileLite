@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:NexaMobileLite.ViewModels"
+    x:Class="NexaMobileLite.Views.Clientes.ClientesPage"
+    BackgroundColor="#050B18"
+    Title="Clientes">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ClientesViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="22" Spacing="18">
+
+            <Label Text="Clientes"
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   TextColor="White" />
+
+            <Label Text="Clientes conectados desde Zeezton Store"
+                   FontSize="14"
+                   TextColor="#94A3B8" />
+
+            <ActivityIndicator
+                IsRunning="{Binding EstaCargando}"
+                IsVisible="{Binding EstaCargando}"
+                Color="#38BDF8" />
+
+            <CollectionView ItemsSource="{Binding Clientes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BackgroundColor="#0F172A"
+                                Stroke="#1E293B"
+                                StrokeThickness="1"
+                                Padding="16"
+                                Margin="0,0,0,12"
+                                StrokeShape="RoundRectangle 24">
+
+                            <VerticalStackLayout Spacing="6">
+
+                                <Label Text="{Binding NombreCompleto}"
+                                       TextColor="White"
+                                       FontSize="18"
+                                       FontAttributes="Bold" />
+
+                                <Label Text="{Binding Rut}"
+                                       TextColor="#94A3B8"
+                                       FontSize="13" />
+
+                                <Label Text="{Binding Email}"
+                                       TextColor="#38BDF8"
+                                       FontSize="13" />
+
+                                <Label Text="{Binding Telefono}"
+                                       TextColor="#A7F3D0"
+                                       FontSize="13" />
+
+                            </VerticalStackLayout>
+
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

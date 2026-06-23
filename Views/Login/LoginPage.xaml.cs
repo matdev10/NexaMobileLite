@@ -1,4 +1,5 @@
 namespace NexaMobileLite.Views.Login;
+using NexaMobileLite.Views.Dashboard;
 
 public partial class LoginPage : ContentPage
 {
@@ -14,7 +15,7 @@ public partial class LoginPage : ContentPage
 
         if (usuario == "admin" && password == "1234")
         {
-            await DisplayAlert("Bienvenido", "Acceso correcto a Nexa Mobile Lite", "Aceptar");
+            Application.Current.MainPage = new NavigationPage(new DashboardPage());
         }
         else
         {

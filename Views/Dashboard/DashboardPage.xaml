@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NexaMobileLite.Views.Dashboard.DashboardPage"
+    BackgroundColor="#050B18"
+    Title="Dashboard">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="22">
+
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Nexa Mobile Lite"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="White" />
+
+                <Label Text="Panel operativo móvil"
+                       FontSize="14"
+                       TextColor="#94A3B8" />
+            </VerticalStackLayout>
+
+            <Border BackgroundColor="#0F172A"
+                    Stroke="#1E293B"
+                    StrokeThickness="1"
+                    Padding="22"
+                    StrokeShape="RoundRectangle 28">
+
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Ventas de hoy"
+                           TextColor="#94A3B8"
+                           FontSize="14" />
+
+                    <Label Text="$0"
+                           TextColor="#38BDF8"
+                           FontSize="34"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Resumen inicial del sistema"
+                           TextColor="#64748B"
+                           FontSize="12" />
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="Auto,Auto"
+                  ColumnSpacing="14"
+                  RowSpacing="14">
+
+                <Border BackgroundColor="#0F172A"
+                        Stroke="#1E293B"
+                        Padding="18"
+                        StrokeShape="RoundRectangle 24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Inventario" TextColor="#94A3B8" FontSize="13" />
+                        <Label Text="0" TextColor="White" FontSize="30" FontAttributes="Bold" />
+                        <Label Text="productos" TextColor="#64748B" FontSize="12" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Column="1"
+                        BackgroundColor="#0F172A"
+                        Stroke="#1E293B"
+                        Padding="18"
+                        StrokeShape="RoundRectangle 24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Stock bajo" TextColor="#94A3B8" FontSize="13" />
+                        <Label Text="0" TextColor="#FACC15" FontSize="30" FontAttributes="Bold" />
+                        <Label Text="alertas" TextColor="#64748B" FontSize="12" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1"
+                        BackgroundColor="#0F172A"
+                        Stroke="#1E293B"
+                        Padding="18"
+                        StrokeShape="RoundRectangle 24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Clientes" TextColor="#94A3B8" FontSize="13" />
+                        <Label Text="0" TextColor="White" FontSize="30" FontAttributes="Bold" />
+                        <Label Text="registrados" TextColor="#64748B" FontSize="12" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1"
+                        Grid.Column="1"
+                        BackgroundColor="#0F172A"
+                        Stroke="#1E293B"
+                        Padding="18"
+                        StrokeShape="RoundRectangle 24">
+                    <VerticalStackLayout Spacing="4">
+                        <Label Text="Pedidos" TextColor="#94A3B8" FontSize="13" />
+                        <Label Text="0" TextColor="White" FontSize="30" FontAttributes="Bold" />
+                        <Label Text="pendientes" TextColor="#64748B" FontSize="12" />
+                    </VerticalStackLayout>
+                </Border>
+
+            </Grid>
+
+            <Label Text="Accesos rápidos"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="White" />
+
+            <Grid ColumnDefinitions="*,*"
+                  RowDefinitions="Auto,Auto,Auto"
+                  ColumnSpacing="14"
+                  RowSpacing="14">
+
+                <Button Text="📦 Inventario"
+                        HeightRequest="92"
+                        FontSize="17"
+                        CornerRadius="22"
+                        BackgroundColor="#1E293B"
+                        TextColor="White" 
+                        Clicked="BtnInventario_Clicked" />
+
+                <Button Text="🛒 Nueva venta"
+                        Grid.Column="1"
+                        HeightRequest="92"
+                        FontSize="17"
+                        CornerRadius="22"
+                        BackgroundColor="#2563EB"
+                        TextColor="White" />
+
+                <Button Text="👥 Clientes"
+                        Grid.Row="1"
+                        HeightRequest="92"
+                        FontSize="17"
+                        CornerRadius="22"
+                        BackgroundColor="#1E293B"
+                        TextColor="White"
+                        Clicked="BtnClientes_Clicked" />
+
+                <Button Text="📋 Pedidos"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HeightRequest="92"
+                        FontSize="17"
+                        CornerRadius="22"
+                        BackgroundColor="#1E293B"
+                        TextColor="White" />
+
+                <Button Text="📊 Reportes"
+                        Grid.Row="2"
+                        HeightRequest="92"
+                        FontSize="17"
+                        CornerRadius="22"
+                        BackgroundColor="#1E293B"
+                        TextColor="White" />
+
+                <Button Text="⚙ Configuración"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        HeightRequest="92"
+                        FontSize="17"
+                        CornerRadius="22"
+                        BackgroundColor="#1E293B"
+                        TextColor="White" />
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
