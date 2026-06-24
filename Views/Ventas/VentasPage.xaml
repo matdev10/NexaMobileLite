@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NexaMobileLite.Views.Ventas.VentasPage"
+    BackgroundColor="#050B18"
+    Title="Nueva venta">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20">
+
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Nueva venta"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="White" />
+
+                <Label Text="Registra una venta rápida desde el móvil"
+                       FontSize="14"
+                       TextColor="#94A3B8" />
+            </VerticalStackLayout>
+
+            <Border BackgroundColor="#0F172A"
+                    Stroke="#1E293B"
+                    StrokeThickness="1"
+                    Padding="18"
+                    StrokeShape="RoundRectangle 24">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Cliente"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold" />
+
+                    <Entry Placeholder="Buscar cliente por nombre o RUT"
+                           PlaceholderColor="#64748B"
+                           TextColor="White"
+                           BackgroundColor="#1E293B" />
+
+                    <Button Text="Buscar cliente"
+                            HeightRequest="50"
+                            CornerRadius="18"
+                            BackgroundColor="#2563EB"
+                            TextColor="White" />
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="#0F172A"
+                    Stroke="#1E293B"
+                    StrokeThickness="1"
+                    Padding="18"
+                    StrokeShape="RoundRectangle 24">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Productos"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold" />
+
+                    <Entry Placeholder="Buscar producto"
+                           PlaceholderColor="#64748B"
+                           TextColor="White"
+                           BackgroundColor="#1E293B" />
+
+                    <CollectionView HeightRequest="240">
+                        <CollectionView.EmptyView>
+                            <Label Text="Aún no hay productos cargados"
+                                   TextColor="#64748B"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </CollectionView.EmptyView>
+                    </CollectionView>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="#0F172A"
+                    Stroke="#1E293B"
+                    StrokeThickness="1"
+                    Padding="18"
+                    StrokeShape="RoundRectangle 24">
+
+                <VerticalStackLayout Spacing="14">
+
+                    <Label Text="Carrito"
+                           TextColor="White"
+                           FontSize="18"
+                           FontAttributes="Bold" />
+
+                    <CollectionView HeightRequest="180">
+                        <CollectionView.EmptyView>
+                            <Label Text="El carrito está vacío"
+                                   TextColor="#64748B"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </CollectionView.EmptyView>
+                    </CollectionView>
+
+                    <BoxView HeightRequest="1"
+                             BackgroundColor="#1E293B" />
+
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Label Text="Total"
+                               TextColor="#94A3B8"
+                               FontSize="18"
+                               FontAttributes="Bold" />
+
+                        <Label Grid.Column="1"
+                               Text="$0"
+                               TextColor="#38BDF8"
+                               FontSize="26"
+                               FontAttributes="Bold" />
+                    </Grid>
+
+                    <Button Text="Registrar venta"
+                            HeightRequest="56"
+                            CornerRadius="20"
+                            FontSize="17"
+                            FontAttributes="Bold"
+                            BackgroundColor="#22C55E"
+                            TextColor="White" />
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

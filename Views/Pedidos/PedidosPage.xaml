@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="NexaMobileLite.Views.Pedidos.PedidosPage"
+    BackgroundColor="#050B18"
+    Title="Pedidos">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="20">
+
+            <VerticalStackLayout Spacing="4">
+
+                <Label
+                    Text="Pedidos"
+                    FontSize="32"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
+
+                <Label
+                    Text="Consulta y seguimiento de pedidos"
+                    FontSize="14"
+                    TextColor="#94A3B8"/>
+
+            </VerticalStackLayout>
+
+            <SearchBar
+                Placeholder="Buscar pedido..."
+                BackgroundColor="#0F172A"
+                PlaceholderColor="#64748B"
+                TextColor="White"/>
+
+            <CollectionView>
+
+                <CollectionView.EmptyView>
+
+                    <Border
+                        BackgroundColor="#0F172A"
+                        Stroke="#1E293B"
+                        StrokeThickness="1"
+                        Padding="25"
+                        StrokeShape="RoundRectangle 24">
+
+                        <VerticalStackLayout
+                            HorizontalOptions="Center"
+                            Spacing="10">
+
+                            <Label
+                                Text="📦"
+                                FontSize="48"
+                                HorizontalOptions="Center"/>
+
+                            <Label
+                                Text="No existen pedidos"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                TextColor="White"
+                                HorizontalOptions="Center"/>
+
+                            <Label
+                                Text="Cuando existan pedidos aparecerán aquí."
+                                FontSize="14"
+                                TextColor="#94A3B8"
+                                HorizontalOptions="Center"/>
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </CollectionView.EmptyView>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
