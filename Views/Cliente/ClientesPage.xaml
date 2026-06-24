@@ -22,6 +22,13 @@
             <Label Text="Clientes conectados desde Zeezton Store"
                    FontSize="14"
                    TextColor="#94A3B8" />
+            <Button Text="➕ Nuevo cliente"
+                   HeightRequest="52"
+                   CornerRadius="18"
+                   BackgroundColor="#2563EB"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   Clicked="BtnNuevoCliente_Clicked" />
 
             <ActivityIndicator
                 IsRunning="{Binding EstaCargando}"

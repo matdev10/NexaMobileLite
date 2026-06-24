@@ -31,7 +31,8 @@
                            TextColor="#94A3B8"
                            FontSize="14" />
 
-                    <Label Text="$0"
+                    <Label x:Name="LblVentasHoy"
+                           Text="$0"
                            TextColor="#38BDF8"
                            FontSize="34"
                            FontAttributes="Bold" />
@@ -53,7 +54,13 @@
                         StrokeShape="RoundRectangle 24">
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Inventario" TextColor="#94A3B8" FontSize="13" />
-                        <Label Text="0" TextColor="White" FontSize="30" FontAttributes="Bold" />
+
+                        <Label x:Name="LblInventario"
+                               Text="0"
+                               TextColor="White"
+                               FontSize="30"
+                               FontAttributes="Bold" />
+
                         <Label Text="productos" TextColor="#64748B" FontSize="12" />
                     </VerticalStackLayout>
                 </Border>
@@ -65,7 +72,13 @@
                         StrokeShape="RoundRectangle 24">
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Stock bajo" TextColor="#94A3B8" FontSize="13" />
-                        <Label Text="0" TextColor="#FACC15" FontSize="30" FontAttributes="Bold" />
+
+                        <Label x:Name="LblStockBajo"
+                               Text="0"
+                               TextColor="#FACC15"
+                               FontSize="30"
+                               FontAttributes="Bold" />
+
                         <Label Text="alertas" TextColor="#64748B" FontSize="12" />
                     </VerticalStackLayout>
                 </Border>
@@ -77,7 +90,13 @@
                         StrokeShape="RoundRectangle 24">
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Clientes" TextColor="#94A3B8" FontSize="13" />
-                        <Label Text="0" TextColor="White" FontSize="30" FontAttributes="Bold" />
+
+                        <Label x:Name="LblClientes"
+                               Text="0"
+                               TextColor="White"
+                               FontSize="30"
+                               FontAttributes="Bold" />
+
                         <Label Text="registrados" TextColor="#64748B" FontSize="12" />
                     </VerticalStackLayout>
                 </Border>
@@ -90,7 +109,13 @@
                         StrokeShape="RoundRectangle 24">
                     <VerticalStackLayout Spacing="4">
                         <Label Text="Pedidos" TextColor="#94A3B8" FontSize="13" />
-                        <Label Text="0" TextColor="White" FontSize="30" FontAttributes="Bold" />
+
+                        <Label x:Name="LblPedidos"
+                               Text="0"
+                               TextColor="White"
+                               FontSize="30"
+                               FontAttributes="Bold" />
+
                         <Label Text="pendientes" TextColor="#64748B" FontSize="12" />
                     </VerticalStackLayout>
                 </Border>
@@ -112,7 +137,7 @@
                         FontSize="17"
                         CornerRadius="22"
                         BackgroundColor="#1E293B"
-                        TextColor="White" 
+                        TextColor="White"
                         Clicked="BtnInventario_Clicked" />
 
                 <Button Text="🛒 Nueva venta"
@@ -140,8 +165,8 @@
                         FontSize="17"
                         CornerRadius="22"
                         BackgroundColor="#1E293B"
-                        TextColor="White" 
-                        Clicked="BtnPedidos_Clicked"/>
+                        TextColor="White"
+                        Clicked="BtnPedidos_Clicked" />
 
                 <Button Text="📊 Reportes"
                         Grid.Row="2"

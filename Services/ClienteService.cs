@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 using NexaMobileLite.Helpers;
 using NexaMobileLite.Models;
 
@@ -27,6 +28,46 @@ public class ClienteService
         catch
         {
             return new List<Cliente>();
+        }
+    }
+
+    public async Task<bool> CrearClienteAsync(Cliente cliente)
+    {
+        try
+        {
+            var data = new
+            {
+                numero_documento = cliente.Rut,
+                nombre = cliente.Nombre,
+                apellido = cliente.Apellido,
+                rut = cliente.Rut,
+                email = cliente.Email,
+                telefono = cliente.Telefono,
+                direccion = "",
+                numero = "",
+                comuna = "",
+                departamento = "",
+                informacion_adicional = ""
+            };
+
+            var json = JsonSerializer.Serialize(data);
+
+            var content = new StringContent(
+                json,
+                Encoding.UTF8,
+                "application/json"
+            );
+
+            var response = await _httpClient.PostAsync(
+                ApiConfig.CrearClienteUrl,
+                content
+            );
+
+            return response.IsSuccessStatusCode;
+        }
+        catch
+        {
+            return false;
         }
     }
 }

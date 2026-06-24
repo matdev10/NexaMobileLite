@@ -30,4 +30,18 @@ public class ClientesViewModel : BaseViewModel
 
         EstaCargando = false;
     }
+
+    public async Task<bool> CrearClienteAsync(Cliente cliente)
+    {
+        EstaCargando = true;
+
+        var creado = await _clienteService.CrearClienteAsync(cliente);
+
+        if (creado)
+            await CargarClientesAsync();
+
+        EstaCargando = false;
+
+        return creado;
+    }
 }
